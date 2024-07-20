@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+<title>编辑信息</title>
+<!-- Favicon -->
+<link rel="shortcut icon" href="assets/img/favicon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&amp;display=swap">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" type="text/css" href="https://www.jq22.com/jquery/bootstrap-5.0.0.css">
+<!-- Fontawesome CSS -->
+<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+<!-- Main CSS -->
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<!-- Main Wrapper -->
+<div class="main-wrapper"><!-- Header -->
+  <div class="header"><!-- Logo -->
+    <div class="header-left"><a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Logo"></a><a href="index.html" class="logo logo-small"><img src="assets/img/logo-small.png" alt="Logo" width="30" height="30"></a></div>
+    <!-- /Logo --><a href="javascript:void(0);" id="toggle_btn"><i class="fas fa-align-left"></i></a><!-- Search Bar -->
+   
+    <!-- /Search Bar --><!-- Mobile Menu Toggle --><a class="mobile_btn" id="mobile_btn"><i class="fas fa-bars"></i></a><!-- /Mobile Menu Toggle --><!-- Header Right Menu -->
+    <ul class="nav user-menu">
+      <!-- Notifications -->
+     
+      <!-- /Notifications --><!-- User Menu -->
+      <li class="nav-item dropdown has-arrow"><a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"><span class="user-img"><img class="rounded-circle" src="assets/img/profiles/avatar-01.jpg" width="31" alt="Ryan Taylor"></span></a>
+        <div class="dropdown-menu">
+          <div class="user-header">
+            <div class="avatar avatar-sm"><img src="assets/img/profiles/avatar-01.jpg" alt="User Image" class="avatar-img rounded-circle"></div>
+            <div class="user-text">
+              <h6>Ryan Taylor</h6>
+              <p class="text-muted mb-0">Administrator</p>
+            </div>
+          </div>
+          <a class="dropdown-item" href="profile.html">My Profile</a><a class="dropdown-item" href="inbox.html">Inbox</a><a class="dropdown-item" href="login.html">Logout</a></div>
+      </li>
+      <!-- /User Menu -->
+    </ul>
+    <!-- /Header Right Menu --></div>
+  <!-- /Header --><!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-inner slimscroll">
+      <div id="sidebar-menu" class="sidebar-menu">
+        <ul>
+          <li><a href="index.html"><i class="fas fa-th-large"></i><span>首页</span></a></li>
+          <li><a href="ww.html"><i class="fas fa-th-large"></i><span>病历信息可视化</span></a></li>
+          <li class="submenu active"><a href="#"><i class="fas fa-user-graduate"></i><span>病人信息管理</span><span class="menu-arrow"></span></a>
+            <ul>
+              <li><a href="patients.html" class="active">病人信息</a></li>
+              <li><a href="add-patient.html" class="active">添加病人</a></li>
+              <li><a href="edit-patient.html"  class="active">编辑信息</a></li>
+            </ul>
+          </li>
+          <li><a href="lalala.html"><i class="fas fa-th-large"></i><span>疼痛评分预测</span></a></li>
+          <li><a href="survival.html"><i class="fas fa-th-large"></i><span>生存率预测</span></a></li>
+          <li class="submenu"><a href="#"><i class="fas fa-shield-alt"></i><span>登录管理</span><span class="menu-arrow"></span></a>
+            <ul>
+              <li><a href="login.html">登录</a></li>
+              <li><a href="register.html">注册</a></li>
+              <li><a href="forgot-password.html">忘记密码</a></li>
+            </ul>
+          </li>
+          <li><a href="help.html"><i class="fas fa-file"></i><span>帮助</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- /Sidebar --><!-- Page Wrapper -->
+  <div class="page-wrapper">
+    <div class="content container-fluid"><!-- Page Header -->
+      <div class="page-header">
+        <div class="row align-items-center">
+          <div class="col">
+            <h3 class="page-title"><b>编辑信息</b></h3>
+            <ul class="breadcrumb">
+              <li class="breadcrumb-item"><a href="patients.html">病人信息管理</a></li>
+              <li class="breadcrumb-item active">编辑信息</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- /Page Header -->
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card">
+            <div class="card-body">
+              <form>
+                <div class="row">
+                  <div class="col-12">
+                    <h5 class="form-title"><span>病人信息</span></h5>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="form-group">
+                      <label>ID</label>
+                      <input type="text" class="form-control" value="346">
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="form-group">
+                      <label>性别</label>
+                      <select class="form-control">
+                        <option>男</option>
+                        <option>选择性别</option>
+                        <option>女</option>
+                        <option>男</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="form-group">
+                      <label>年龄</label>
+                      <input type="text" class="form-control" value="81">
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="form-group">
+                      <label>婚姻状况</label>
+                      <select class="form-control">
+                        <option>已婚</option>
+                        <option>选择婚姻状况</option>
+                        <option>已婚</option>
+                        <option>未婚</option>
+                        <option>其他</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="form-group">
+                      <label>T分期</label>
+                      <select class="form-control">
+                        <option>T1</option>
+                        <option>选择T分期</option>
+                        <option>T1</option>
+                        <option>T2</option>
+                        <option>T3</option>
+                        <option>T4</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="form-group">
+                      <label>N分期</label>
+                      <select class="form-control">
+                        <option>N0</option>
+                        <option>选择N分期</option>
+                        <option>N0</option>
+                        <option>N1</option>
+                        <option>N2</option>
+                        <option>N3</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="form-group">
+                      <label>M分期</label>
+                      <select class="form-control">
+                        <option>M0</option>
+                        <option>选择M分期</option>
+                        <option>M0</option>
+                        <option>M1</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="form-group">
+                      <label>肿瘤分级</label>
+                      <select class="form-control">
+                        <option>I</option>
+                        <option>选择肿瘤分级</option>
+                        <option>I</option>
+                        <option>II</option>
+                        <option>III</option>
+                        <option>IV</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <h5 class="form-title"><span>治疗情况</span></h5>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="form-group">
+                      <label>手术情况</label>
+                      <select class="form-control">
+                        <option>是</option>
+                        <option>选择手术情况</option>
+                        <option>是</option>
+                        <option>否</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="form-group">
+                      <label>放疗情况</label>
+                      <select class="form-control">
+                        <option>否</option>
+                        <option>选择放疗情况</option>
+                        <option>是</option>
+                        <option>否</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="form-group">
+                      <label>化疗情况</label>
+                      <select class="form-control">
+                        <option>否</option>
+                        <option>选择化疗情况</option>
+                        <option>是</option>
+                        <option>否</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <h5 class="form-title"><span>生存情况</span></h5>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="form-group">
+                      <label>生存状态</label>
+                      <select class="form-control">
+                        <option>存活</option>
+                        <option>选择生存状态</option>
+                        <option>存活</option>
+                        <option>死亡</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="form-group">
+                      <label>生存月</label>
+                      <input type="text" class="form-control" value="39">
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="form-group">
+                      <label>疼痛评分</label>
+                      <input type="text" class="form-control" value="1">
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary">提交</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Page Wrapper --></div>
+<!-- /Main Wrapper --><!-- jQuery --><script src="https://www.jq22.com/jquery/jquery-3.3.1.js"></script><!-- Bootstrap Core JS --><script src="assets/js/popper.min.js"></script><script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script><!-- Slimscroll JS --><script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script><!-- Custom JS --><script src="assets/js/script.js"></script>
+</body>
+</html>

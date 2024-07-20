@@ -1,0 +1,429 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+<title>慧能智测-病历信息可视化</title>
+
+<style>
+  /* 容器样式 */
+  .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;/* 设置容器高度为视口高度，使内容垂直居中 */
+  }
+  img {
+    margin-bottom: 20px; /* 增加图片下方的外边距 */
+}
+
+body {
+
+background: #FFFFFF;
+
+}
+
+#tagsList {
+
+position: relative;
+
+width:450px;
+
+height: 335px;
+
+margin: 10px auto 0;
+
+}
+
+#tagsList a {
+
+position: absolute;
+
+top: 0px;
+
+left: 0px;
+
+font-family: Microsoft YaHei;
+ /* 设置字体大小 */
+color: #070101;
+
+font-weight: bold;
+
+text-decoration: none;
+
+padding: 3px 6px;
+
+}
+
+#tagsList a:hover {
+
+color: #FF0000;
+
+letter-spacing: 2px;
+
+}
+/* 依次设置链接字体颜色 */
+#tagsList a:nth-child(1) { color: #ff7f2af3;font-size: 40px;} /* 黄 */
+#tagsList a:nth-child(2) { color: #1fc865d5;font-size: 40px;} /* 绿 */
+#tagsList a:nth-child(3) { color: #1f55ca;font-size: 40px;   } /* 蓝 */
+#tagsList a:nth-child(4) { color: #600460; font-size: 40px;  } /* 紫 */
+#tagsList a:nth-child(5) { color: #ff7f2af3;font-size: 40px;   } /* 黄 */
+#tagsList a:nth-child(6) { color: #1fc865d5;font-size: 40px;   } /* 绿 */
+#tagsList a:nth-child(7) { color: #1f55ca;font-size: 40px;   } /* 蓝 */
+#tagsList a:nth-child(8) { color: #600460;font-size: 40px;   } /* 紫 */
+#tagsList a:nth-child(9) { color: #ff7f2af3;font-size: 40px;   } /* 黄 */
+#tagsList a:nth-child(10) { color: #1fc865d5;font-size: 40px;   } /* 绿 */
+#tagsList a:nth-child(11) { color: #1f55ca;font-size: 40px;   } /* 蓝 */
+#tagsList a:nth-child(12) { color: #600460;font-size: 40px;   } /* 蓝 */
+  
+  </style>
+  <script type="text/javascript" src="tags.js"></script>
+<!-- Favicon -->
+<link rel="shortcut icon" href="assets/img/favicon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&amp;display=swap">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" type="text/css" href="https://www.jq22.com/jquery/bootstrap-5.0.0.css">
+<!-- Fontawesome CSS -->
+<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+<!-- Main CSS -->
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<!-- Main Wrapper -->
+<div class="main-wrapper"><!-- Header -->
+  <div class="header"><!-- Logo -->
+    <div class="header-left"><a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Logo"></a><a href="index.html" class="logo logo-small"><img src="assets/img/logo-small.png" alt="Logo" width="30" height="30"></a></div>
+    <!-- /Logo --><a href="javascript:void(0);" id="toggle_btn"><i class="fas fa-align-left"></i></a><!-- Search Bar -->
+    
+    <!-- /Search Bar --><!-- Mobile Menu Toggle --><a class="mobile_btn" id="mobile_btn"><i class="fas fa-bars"></i></a><!-- /Mobile Menu Toggle --><!-- Header Right Menu -->
+    <ul class="nav user-menu">
+      <!-- /Notifications --><!-- User Menu -->
+      <li class="nav-item dropdown has-arrow"><a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"><span class="user-img"><img class="rounded-circle" src="assets/img/profiles/avatar-01.jpg" width="31" alt="Ryan Taylor"></span></a>
+        <div class="dropdown-menu">
+          <div class="user-header">
+            <div class="avatar avatar-sm"><img src="assets/img/profiles/avatar-01.jpg" alt="User Image" class="avatar-img rounded-circle"></div>
+            <div class="user-text">
+              <h6>Doctor</h6>
+              <p class="text-muted mb-0">管理</p>
+            </div>
+          </div>
+          <a class="dropdown-item" href="profile.html">My Profile</a><a class="dropdown-item" href="inbox.html">Inbox</a><a class="dropdown-item" href="login.html">Logout</a></div>
+      </li>
+      <!-- /User Menu -->
+    </ul>
+    <!-- /Header Right Menu --></div>
+ <!-- /Header -->
+<!-- Sidebar -->
+  <!-- /Header --><!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-inner slimscroll">
+      <div id="sidebar-menu" class="sidebar-menu">
+        <ul>
+          <li class="active"><a href="index.html"><i class="fas fa-th-large"></i><span>首页</span></a></li>
+          <li class="active"><a href="ww.html"><i class="fas fa-th-large"></i><span>病历信息可视化</span></a></li>
+          <li class="submenu"><a href="#"><i class="fas fa-shield-alt"></i><span>病人信息管理</span><span class="menu-arrow"></span></a>
+            <ul>
+              <li><a href="patients.html">病人信息</a></li>
+              <li><a href="add-patient.html">添加病人</a></li>
+              <li><a href="edit-patient.html">编辑信息</a></li>
+            </ul>
+          </li>
+          <li><a href="lalala.html"><i class="fas fa-book-reader"></i><span>疼痛评分预测</span><span></span></a></li>
+          <li><a href="survival.html"><i class="fas fa-th-large"></i><span>生存率预测</span></a></li>
+          <li class="submenu"><a href="#"><i class="fas fa-shield-alt"></i><span>登录管理</span><span class="menu-arrow"></span></a>
+            <ul>
+              <li><a href="login.html">登录</a></li>
+              <li><a href="register.html">注册</a></li>
+              <li><a href="forgot-password.html">忘记密码</a></li>
+            </ul>
+          </li>
+          <li><a href="help.html"><i class="fas fa-file"></i><span>帮助</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- /Sidebar --><!-- Page Wrapper -->
+  <div class="page-wrapper">
+    <div class="content container-fluid"><!-- Page Header -->
+      <div class="page-header">
+        <div class="row">
+          <div class="col-sm-12">
+            <h3 class="page-title"style="font-weight: bold;">病历信息可视化</h3>
+           
+          </div>
+        </div>
+      </div>
+      <!-- /Page Header --><!-- Overview Section -->
+      <div class="row">
+        <div class="col-xl-3 col-sm-6 col-12">
+          <div class="card bg-one">
+            <div class="card-body">
+              <div class="db-widgets d-flex justify-content-between align-items-center">
+                <div class="db-icon text-center"><i class="fas fa-lungs"style="margin-left: -7px;"style="margin-top: 2px;"></i></div>
+                <div class="db-info">
+                  <h3>209</h3>
+                  <h6>病历数量</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-12">
+          <div class="card bg-two">
+            <div class="card-body">
+              <div class="db-widgets d-flex justify-content-between align-items-center">
+                <div class="db-icon text-center"><i class="fas fa-user-alt"style="margin-top: 2px;"></i></div>
+                <div class="db-info">
+                  <h3>61</h3>
+                  <h6>平均年龄</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-12">
+          <div class="card bg-three">
+            <div class="card-body">
+              <div class="db-widgets d-flex justify-content-between align-items-center">
+                <div class="db-icon text-center"><i class="fas fa-mars"style="margin-top: 3px;"></i></div>
+                <div class="db-info">
+                  <h5 style="font-weight: bold;">男性</h5>
+                  <h6>主要性别</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-12">
+          <div class="card bg-four">
+            <div class="card-body">
+              <div class="db-widgets d-flex justify-content-between align-items-center">
+                <div class="db-icon text-center"><i class="fas fa-thermometer-half" style="margin-top: 3px;"></i></div>
+                <div class="db-info">
+                  <h5 style="font-weight: bold;">中度疼痛</h5>
+                  <h6>平均疼痛水平</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- /Page Header --><!-- Overview Section -->
+
+        
+        <div class="row">
+          <div class="col-md-6 col-lg-4"><!-- 病人数目图表 -->
+            <div class="card card-chart">
+              <div class="card-header">
+                <div class="row align-items-center">
+                  <div class="col-6">
+                    <h5 class="card-title"style="font-weight: bold;">性别占比</h5>
+                  </div>
+                  <div class="col-6">
+                    <ul class="list-inline-group text-right mb-0 pl-0">
+                      <li class="list-inline-item">
+                        <div class="form-group mb-0 amount-spent-select">
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div id="bar"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-4"><!-- 病人数目图表 -->
+            <div class="card card-chart">
+              <div class="card-header">
+                <div class="row align-items-center">
+                  <div class="col-7">
+                    <h5 class="card-title"style="font-weight: bold;">年龄分布</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body"style="height: 385px;">
+                <div id="pie"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4"><!-- 治疗手段图表 -->
+            <div class="card card-chart">
+              <div class="card-header">
+                <div class="row align-items-center">
+                  <div class="col-7">
+                    <h5 class="card-title"style="font-weight: bold;">治疗方式</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body" style="height: 385px; display: flex; flex-direction: column; justify-content: center;">
+                <h4 class="small font-weight-bold">免疫治疗 <span class="float-right">14.8%</span></h4>
+                <div class="progress mb-4" style="margin-bottom: 4rem;">
+                  <div class="progress-bar bg-danger" role="progressbar" style="width: 14.8%" aria-valuenow="14.8" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <h4 class="small font-weight-bold">化疗 <span class="float-right">15.2%</span></h4>
+                <div class="progress mb-4" style="margin-bottom: 4rem;">
+                  <div class="progress-bar bg-warning" role="progressbar" style="width: 15.2%" aria-valuenow="15.2" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <h4 class="small font-weight-bold">放疗 <span class="float-right">21.7%</span></h4>
+                <div class="progress mb-4" style="margin-bottom: 1.5rem;">
+                  <div class="progress-bar" role="progressbar" style="width: 21.7%" aria-valuenow="21.7" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <h4 class="small font-weight-bold">手术 <span class="float-right">48.3%</span></h4>
+                <div class="progress mb-4" style="margin-bottom: 1.5rem;">
+                  <div class="progress-bar bg-info" role="progressbar" style="width: 48.3%" aria-valuenow="48.3" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4"><!-- 病人数目图表 -->
+            <div class="card card-chart">
+              <div class="card-header">
+                <div class="row align-items-center">
+                  <div class="col-6">
+                    <h5 class="card-title"style="font-weight: bold;">词云</h5>
+                  </div>
+                </div>
+              </div>
+              <div id="tagsList"> 
+
+                <a href="#/Article.aspx?kid=1" title="肿瘤转移">肿瘤转移</a> 
+            
+                <a href="#/Article.aspx?kid=2" title="中度疼痛">中度疼痛</a> 
+            
+                <a href="#/Article.aspx?kid=3" title="弱阿片类药物">弱阿片类药物</a> 
+            
+                <a href="#/Article.aspx?kid=4" title="Grade III">Grade III</a> 
+            
+                <a href="#/Article.aspx?kid=5" title="手术">手术</a> 
+            
+                <a href="#/Article.aspx?kid=6" title="化疗">化疗</a> 
+            
+                <a href="#/Article.aspx?kid=7" title="免疫治疗">免疫治疗</a> 
+            
+                <a href="#/Article.aspx?kid=8" title="死亡高风险">死亡高风险</a> 
+            
+                <a href="#/Article.aspx?kid=9" title="轻度疼痛">轻度疼痛</a> 
+            
+                <a href="#/Article.aspx?kid=10" title="非阿片类药物">非阿片类药物</a> 
+            
+                <a href="#/Article.aspx?kid=11" title="男性">男性</a> 
+                
+                <a href="#/Article.aspx?kid=12" title="T1">T1</a> 
+
+            </div>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-lg-8"><!-- 病人简表 -->
+            <div class="card card-chart"> <!-- 添加相同的class -->
+              <div class="card-header">
+                <h5 class="card-title"style="font-weight: bold;">病人简表</h5>
+              </div>
+              <div class="card-body"> <!-- 保持相同的card-body样式 -->
+                <div class="table-responsive">
+                  <table class="table table-hover table-center">
+                    <thead class="thead-light">
+                      <tr>
+                        <th>ID</th>
+                        <th>性别</th>
+                        <th>年龄</th>
+                        <th>T分期</th>
+                        <th>N分期</th>
+                        <th>远处转移</th>
+                        <th>肿瘤分期</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- 病人数据 -->
+                      <tr>
+                        <td class="text-nowrap"><div>345</div></td>
+                        <td class="text-nowrap">男</td>
+                        <td class="text-nowrap">75</td>
+                        <td class="text-nowrap">T3</td>
+                        <td class="text-nowrap">N1</td>
+                        <td class="text-nowrap">否</td>
+                        <td class="text-nowrap">Ⅳ</td>
+                      </tr>
+
+                      <tr>
+                        <td class="text-nowrap"><div>346</div></td>
+                        <td class="text-nowrap">男</td>
+                        <td class="text-nowrap">81</td>
+                        <td class="text-nowrap">T0</td>
+                        <td class="text-nowrap">N1</td>
+                        <td class="text-nowrap">否</td>
+                        <td class="text-nowrap">Ⅰ</td>
+                      </tr>
+
+                      <tr>
+                        <td class="text-nowrap"><div>347</div></td>
+                        <td class="text-nowrap">男</td>
+                        <td class="text-nowrap">56</td>
+                        <td class="text-nowrap">T2</td>
+                        <td class="text-nowrap">N2</td>
+                        <td class="text-nowrap">是</td>
+                        <td class="text-nowrap">Ⅲ</td>
+                      </tr>
+
+                      <tr>
+                        <td class="text-nowrap"><div>348</div></td>
+                        <td class="text-nowrap">男</td>
+                        <td class="text-nowrap">80</td>
+                        <td class="text-nowrap">T2</td>
+                        <td class="text-nowrap">N0</td>
+                        <td class="text-nowrap">否</td>
+                        <td class="text-nowrap">Ⅱ</td>
+                      </tr>
+
+                      <tr>
+                        <td class="text-nowrap"><div>349</div></td>
+                        <td class="text-nowrap">男</td>
+                        <td class="text-nowrap">37</td>
+                        <td class="text-nowrap">T0</td>
+                        <td class="text-nowrap">N1</td>
+                        <td class="text-nowrap">是</td>
+                        <td class="text-nowrap">Ⅱ</td>
+                      </tr>
+                      <tr>
+                        <td class="text-nowrap"><div>350</div></td>
+                        <td class="text-nowrap">女</td>
+                        <td class="text-nowrap">82</td>
+                        <td class="text-nowrap">T3</td>
+                        <td class="text-nowrap">N2</td>
+                        <td class="text-nowrap">是</td>
+                        <td class="text-nowrap">Ⅳ</td>
+                      </tr>
+
+                      <tr>
+                        <td class="text-nowrap"><div>351</div></td>
+                        <td class="text-nowrap">女</td>
+                        <td class="text-nowrap">54</td>
+                        <td class="text-nowrap">T1</td>
+                        <td class="text-nowrap">N0</td>
+                        <td class="text-nowrap">否</td>
+                        <td class="text-nowrap">Ⅰ</td>
+                      </tr>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+
+        </div>
+
+          
+    <!-- /Footer --></div>
+  <!-- /Page Wrapper --></div>
+<!-- /Main Wrapper --><!-- jQuery --><script src="https://www.jq22.com/jquery/jquery-3.3.1.js"></script><!-- Bootstrap Core JS --><script src="assets/js/popper.min.js"></script><script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script><!-- Slimscroll JS --><script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script><!-- Chart JS --><script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/apexcharts/3.22.0/apexcharts.min.js"></script><script src="assets/plugins/apexchart/chart-data.js"></script><!-- Custom JS --><script src="assets/js/script.js"></script>
+</body>
+</html>

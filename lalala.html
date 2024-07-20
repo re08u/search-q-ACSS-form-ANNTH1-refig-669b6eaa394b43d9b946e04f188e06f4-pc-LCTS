@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<style>
+/* 在这里添加你的 CSS 代码 */
+table{
+    background-color: white;
+}
+
+/* 可以针对表头和表体进行不同的背景颜色设置 */
+thead {
+    background-color: #dce4ec; /* 设置表头的背景颜色为浅灰色 */
+}
+
+tbody {
+    background-color: white; /* 设置表体的背景颜色为白色 */
+}
+
+</style>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>疼痛评分预测</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="https://www.jq22.com/jquery/bootstrap-5.0.0.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+<!-- Main Wrapper -->
+<div class="main-wrapper">
+    <!-- Header -->
+    <div class="header">
+        <div class="header-left">
+            <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Logo"></a>
+            <a href="index.html" class="logo logo-small"><img src="assets/img/logo-small.png" alt="Logo" width="30" height="30"></a>
+        </div>
+        <a href="javascript:void(0);" id="toggle_btn"><i class="fas fa-align-left"></i></a>
+       
+        <a class="mobile_btn" id="mobile_btn"><i class="fas fa-bars"></i></a>
+        <ul class="nav user-menu">
+            <!-- User Menu -->
+           <!-- /Notifications --><!-- User Menu -->
+            <li class="nav-item dropdown has-arrow"><a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"><span class="user-img"><img class="rounded-circle" src="assets/img/profiles/avatar-01.jpg" width="31" alt="Ryan Taylor"></span></a>
+                <div class="dropdown-menu">
+                <div class="user-header">
+                    <div class="avatar avatar-sm"><img src="assets/img/profiles/avatar-01.jpg" alt="User Image" class="avatar-img rounded-circle"></div>
+                    <div class="user-text">
+                    <h6>Doctor</h6>
+                    <p class="text-muted mb-0">管理</p>
+                    </div>
+                </div>
+                <a class="dropdown-item" href="profile.html">My Profile</a><a class="dropdown-item" href="inbox.html">Inbox</a><a class="dropdown-item" href="login.html">Logout</a></div>
+            </li>
+            <!-- /User Menu -->
+        </ul>
+    </div>
+    <!-- /Header -->
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-inner slimscroll">
+            <div id="sidebar-menu" class="sidebar-menu">
+                <!-- Sidebar content here -->
+            </div>
+        </div>
+    </div>
+    <!-- /Header --><!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-inner slimscroll">
+      <div id="sidebar-menu" class="sidebar-menu">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-th-large"></i><span>首页</span></a></li>
+            <li><a href="ww.html"><i class="fas fa-th-large"></i><span>病历信息可视化</span></a></li>
+         <li class="submenu"><a href="#"><i class="fas fa-shield-alt"></i><span>病人信息管理</span><span class="menu-arrow"></span></a>
+            <ul>
+              <li><a href="patients.html">病人信息</a></li>
+              <li><a href="add-patient.html">添加病人</a></li>
+              <li><a href="edit-patient.html">编辑信息</a></li>
+            </ul>
+          </li>
+          <li class="active"><a href="lalala.html"><i class="fas fa-book-reader"></i><span>疼痛评分预测</span><span></span></a></li> 
+          <li><a href="survival.html"><i class="fas fa-th-large"></i><span>生存率预测</span></a></li>
+          
+          <li class="submenu"><a href="#"><i class="fas fa-shield-alt"></i><span>登录管理</span><span class="menu-arrow"></span></a>
+            <ul>
+              <li><a href="login.html">登录</a></li>
+              <li><a href="register.html">注册</a></li>
+              <li><a href="forgot-password.html">忘记密码</a></li>
+            </ul>
+          </li> 
+          <li><a href="help.html"><i class="fas fa-file"></i><span>帮助</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    <!-- /Sidebar -->
+    <!-- Page Wrapper -->
+    <!DOCTYPE html>
+    <style>
+    /* 在这里添加你的 CSS 代码 */
+    table{
+        background-color: white;
+    }
+    
+    /* 可以针对表头和表体进行不同的背景颜色设置 */
+    thead {
+        background-color: #dce4ec; /* 设置表头的背景颜色为浅灰色 */
+    }
+    
+    tbody {
+        background-color: white; /* 设置表体的背景颜色为白色 */
+    }
+    
+    </style>
+    <html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+        <title>疼痛评分预测</title>
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="assets/img/favicon.png">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" type="text/css" href="https://www.jq22.com/jquery/bootstrap-5.0.0.css">
+        <!-- Fontawesome CSS -->
+        <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+        <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+    <!-- Main Wrapper -->
+    <div class="main-wrapper">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left">
+                <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Logo"></a>
+                <a href="index.html" class="logo logo-small"><img src="assets/img/logo-small.png" alt="Logo" width="30" height="30"></a>
+            </div>
+            <a href="javascript:void(0);" id="toggle_btn"><i class="fas fa-align-left"></i></a>
+            
+            <a class="mobile_btn" id="mobile_btn"><i class="fas fa-bars"></i></a>
+            <ul class="nav user-menu">
+                <!-- User Menu -->
+               <!-- /Notifications --><!-- User Menu -->
+                <li class="nav-item dropdown has-arrow"><a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"><span class="user-img"><img class="rounded-circle" src="assets/img/profiles/avatar-01.jpg" width="31" alt="Ryan Taylor"></span></a>
+                    <div class="dropdown-menu">
+                    <div class="user-header">
+                        <div class="avatar avatar-sm"><img src="assets/img/profiles/avatar-01.jpg" alt="User Image" class="avatar-img rounded-circle"></div>
+                        <div class="user-text">
+                        <h6>Doctor</h6>
+                        <p class="text-muted mb-0">管理</p>
+                        </div>
+                    </div>
+                    <a class="dropdown-item" href="profile.html">My Profile</a><a class="dropdown-item" href="inbox.html">Inbox</a><a class="dropdown-item" href="login.html">Logout</a></div>
+                </li>
+                <!-- /User Menu -->
+            </ul>
+        </div>
+        <!-- /Header -->
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <!-- Sidebar content here -->
+                </div>
+            </div>
+        </div>
+        <!-- /Header --><!-- Sidebar -->
+      <div class="sidebar" id="sidebar">
+        <div class="sidebar-inner slimscroll">
+          <div id="sidebar-menu" class="sidebar-menu">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-th-large"></i><span>首页</span></a></li>
+                <li><a href="ww.html"><i class="fas fa-th-large"></i><span>病历信息可视化</span></a></li>
+              <li class="submenu"><a href="#"><i class="fas fa-shield-alt"></i><span>病人信息管理</span><span class="menu-arrow"></span></a>
+                <ul>
+                    <li><a href="patients.html">病人信息</a></li>
+                    <li><a href="add-patient.html">添加病人</a></li>
+                    <li><a href="edit-patient.html">编辑信息</a></li>
+                </ul>
+              </li>
+              <li class="active"><a href="lalala.html"><i class="fas fa-book-reader"></i><span>疼痛评分预测</span><span></span></a></li> 
+              <li><a href="survival.html"><i class="fas fa-th-large"></i><span>生存率预测</span></a></li>
+              
+              <li class="submenu"><a href="#"><i class="fas fa-shield-alt"></i><span>登录管理</span><span class="menu-arrow"></span></a>
+                <ul>
+                  <li><a href="login.html">登录</a></li>
+                  <li><a href="register.html">注册</a></li>
+                  <li><a href="forgot-password.html">忘记密码</a></li>
+                </ul>
+              </li> 
+              <li><a href="help.html"><i class="fas fa-file"></i><span>帮助</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+        <!-- /Sidebar -->
+        <!-- Page Wrapper -->
+        <div class="page-wrapper">
+            <div class="content container-fluid">
+                <!-- Page Header -->
+                <div class="page-header">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <h3 class="page-title"><b>疼痛评分预测</b></h3>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="subjects.html">主页</a></li>
+                                <li class="breadcrumb-item active">疼痛评分预测</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Page Header -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <form id="patientForm">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h5 class="form-title"><span><strong>患者信息</strong></span></h5>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="form-group">
+                                                <label><strong>病案号</strong></label>
+                                                <input type="text" class="form-control" id="patientId">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="form-group">
+                                                <label><strong>患者姓名</strong></label>
+                                                <input type="text" class="form-control" id="patientName">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 text-center">
+                                            <button type="submit" class="btn btn-primary btn-block" id="searchBtn">搜索</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Patient Info Form -->
+    
+                <!-- Prediction Factors -->
+                <div class="row" id="tableContent" style="display: none;">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="form-title"><span><strong>预测因子</strong></span></h5>
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>性别</th>
+                                                <th>年龄</th>
+                                                <th>T分期</th>
+                                                <th>N分期</th>
+                                                <th>M分期</th>
+                                                <th>分级</th>
+                                                <th>手术</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="factorTableBody">
+                                            <!-- Dynamic Content -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="button" class="btn btn-primary btn-block" id="predictBtn" style="display: none;">预测</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Prediction Results -->
+                <div class="row" id="predictionTable" style="display: none;">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h5 class="form-title"><span><strong>预测概率</strong></span></h5>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>无痛</th>
+                                                    <th>轻度疼痛</th>
+                                                    <th>中度疼痛</th>
+                                                    <th>重度疼痛</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="predictionTableBody">
+                                                <!-- Dynamic Content -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="card mt-3" style="background-color: #fff9e6;">
+                                            <div class="card-body">
+                                                <h5 style="text-align: center; color: red;" id="painLevel"><strong></strong></h5>
+                                                <p style="text-align: center;" id="treatmentDescription"></p>
+                                                <p style="text-align: center; color: red;"><strong>Notice!</strong> <span id="treatmentMethods"></span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- /Page Wrapper -->
+    </div>
+    <!-- /Main Wrapper -->
+    
+    <!-- jQuery -->
+    <script>
+        document.getElementById('searchBtn').addEventListener('click', function(event){
+            event.preventDefault();
+            if (confirm("确定要进行搜索吗？")) {
+                const patientId = document.getElementById('patientId').value;
+                const patientName = document.getElementById('patientName').value;
+                fetchPatientData(patientId, patientName);
+            }
+        });
+
+        const patientData = {
+            '356': {
+                name: '王爱华',
+                gender: '男',
+                age: 57,
+                tStage: 'T3',
+                nStage: 'N2',
+                mStage: 'M1',
+                grade: 'Grade III',
+                surgery: '否',
+                prediction: {
+                    noPain: '11.89%',
+                    mildPain: '20.23%',
+                    moderatePain: '75.65%',
+                    severePain: '50.78%',
+                    painLevel: 'Moderate pain',
+                    treatmentDescription: 'For the treatment of moderate pain in lung cancer, a comprehensive approach is typically used. Common methods include:',
+                    treatmentMethods: 'medication (such as ibuprofen, naproxen, and weak opioids like codeine and tramadol), radiation therapy, physical therapy (such as heat therapy, cold therapy, and massage).'
+                }
+            },
+            '336': {
+                name: '刘畅',
+                gender: '女',
+                age: 54,
+                tStage: 'T2',
+                nStage: 'N2',
+                mStage: 'M0',
+                grade: 'Grade II',
+                surgery: '是',
+                prediction: {
+                    noPain: '30.56%',
+                    mildPain: '78.35%',
+                    moderatePain: '12.37%',
+                    severePain: '10.25%',
+                    painLevel: 'Mild pain',
+                    treatmentDescription: 'These methods aim to effectively alleviate pain and improve the patients quality of life, tailored to individual needs for optimal pain management and holistic care.',
+                    treatmentMethods: 'The treatment of mild lung cancer pain involves a comprehensive approach encompassing pharmacotherapy, physical therapies such as heat application and massage, acupuncture, psychological therapies like relaxation techniques and cognitive behavioral therapy, and nutritional support.'
+                }
+            },
+            // 添加更多病案号和对应的数据
+            '342': {
+                name: '朱呈',
+                gender: '男',
+                age: 77,
+                tStage: 'T3',
+                nStage: 'N3',
+                mStage: 'M1',
+                grade: 'Grade IV',
+                surgery: '是',
+                prediction: {
+                    noPain: '20.49%',
+                    mildPain: '13.65%',
+                    moderatePain: '50.67%',
+                    severePain: '81.67%',
+                    painLevel: 'Severe pain',
+                    treatmentDescription: 'Strong opioids (such as morphine and fentanyl) are used, possibly in combination with more invasive treatments like radiation therapy and nerve blocks. Comprehensive psychological support and nutritional support are also provided to alleviate pain and improve quality of life.',
+                    treatmentMethods: 'When treating severe pain, doctors should cautiously use strong opioids, monitoring for side effects and dependency; combine radiation therapy and nerve blocks as part of a comprehensive treatment approach.'
+                }
+            }
+
+        };
+
+        function fetchPatientData(patientId, patientName) {
+            const data = patientData[patientId];
+            if (data && data.name === patientName) {
+                // 更新预测因子表格
+                const factorTableBody = document.getElementById('factorTableBody');
+                factorTableBody.innerHTML = `
+                    <tr>
+                        <td>${data.gender}</td>
+                        <td>${data.age}</td>
+                        <td>${data.tStage}</td>
+                        <td>${data.nStage}</td>
+                        <td>${data.mStage}</td>
+                        <td>${data.grade}</td>
+                        <td>${data.surgery}</td>
+                    </tr>
+                `;
+                document.getElementById('tableContent').style.display = 'block';
+
+                // 显示预测按钮
+                document.getElementById('predictBtn').style.display = 'block';
+
+                // 添加预测按钮点击事件
+                document.getElementById('predictBtn').onclick = function() {
+                    if (confirm("确定要进行预测吗？")) {
+                        // 更新预测结果表格
+                        const predictionTableBody = document.getElementById('predictionTableBody');
+                        predictionTableBody.innerHTML = `
+                            <tr>
+                                <td>${data.prediction.noPain}</td>
+                                <td>${data.prediction.mildPain}</td>
+                                <td>${data.prediction.moderatePain}</td>
+                                <td>${data.prediction.severePain}</td>
+                            </tr>
+                        `;
+                        document.getElementById('predictionTable').style.display = 'block';
+
+                        // 更新疼痛等级和治疗方法
+                        document.getElementById('painLevel').innerText = data.prediction.painLevel;
+                        document.getElementById('treatmentDescription').innerText = data.prediction.treatmentDescription;
+                        document.getElementById('treatmentMethods').innerText = data.prediction.treatmentMethods;
+                    }
+                };
+            } else {
+                alert('未找到该病案号和患者姓名的相关数据');
+            }
+        }
+    </script>
+    <script src="https://www.jq22.com/jquery/jquery-3.3.1.js"></script><!-- Bootstrap Core JS --><script src="assets/js/popper.min.js"></script><script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script><!-- Slimscroll JS --><script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script><!-- Custom JS --><script src="assets/js/script.js"></script>
+    </body>
+    </html>
+    
